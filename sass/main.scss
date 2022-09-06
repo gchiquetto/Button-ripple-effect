@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+main{
+    background-color: #3A4960;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8rem;
+    width: 20rem;
+    border-radius: 1rem;
+    background-color: #8F7BC5;
+    color: azure;
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transform: all .4s;
+
+}
+
+.ripple{
+        position: absolute;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        transform: translate(-50%,-50%) scale(0);
+        animation: ripple .8s ease-out;
+        background-color:rgba($color: azure, $alpha: .6);
+    }
+
+
+
+@keyframes ripple {
+    to{
+        transform: translate(-50%,-50%) scale(5);
+        opacity: 0;
+    }
+}
